@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    body {
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: calc(100% - 12px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+textarea {
+  width: calc(100% - 12px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  min-height: 80px;
+}
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+  </style>
+</head>
+
+<body>
+  <div class="form-container">
+  <h2>Enter Your Information</h2>
+<form action="https://api.web3forms.com/submit" method="POST">
+  
+  <!-- Replace with your Access Key -->
+  <input type="hidden" name="access_key" value="368ae1bb-0181-4154-9af1-c009ce51af80">
+  
+  <!-- Form Inputs. Each input must have a name="" attribute -->
+<div class="form-group">
+<label for="Game">Game Name:</label>
+<input type="text" id="name" name="name" required>
+</div>
+   <div class="form-group">
+   <label for="UID">UID:</label>
+   <input type="number" id="number" name="number" required>
+ </div>
+  <div class="form-group">
+  <label for="remark">Remark:</label>
+  <textarea id="remark" name="remark"></textarea>
+</div>
+  
+  <!-- Honeypot Spam Protection -->
+  <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+  
+  <!-- Custom Confirmation / Success Page -->
+  <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+  
+<button type="submit">Submit Form</button>
+  
+</form>
+  </div>
+</body>
+
+</html>
