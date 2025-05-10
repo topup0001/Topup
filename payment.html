@@ -59,7 +59,6 @@
   
   .payment-methods h2 {
     color: red;
-    /* Teal color for payment heading */
     text-align: left;
     margin-top: 0;
   }
@@ -143,6 +142,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 400px;
 }
+
 .form-group {
   margin-bottom: 20px;
 }
@@ -181,10 +181,10 @@ textarea {
   <h2>Enter Your Information</h2>
   <form action="https://api.web3forms.com/submit" method="POST">
     
-    <!-- Replace with your Access Key -->
+   
     <input type="hidden" name="access_key" value="368ae1bb-0181-4154-9af1-c009ce51af80">
     
-    <!-- Form Inputs. Each input must have a name="" attribute -->
+
     <div class="form-group">
       <label for="Game">Game Name:</label>
       <input type="text" id="name" name="name" required>
@@ -198,11 +198,11 @@ textarea {
       <textarea id="remark" name="remark"></textarea>
     </div>
     
-    <!-- Honeypot Spam Protection -->
+   
     <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
     
   
-  
+ 
   <div class="payment-container">
     
     <h2>Choose Your Payment Method</h2>
@@ -220,6 +220,8 @@ textarea {
       <div class="payment-option">
         <label for="bank"> <input type="radio" id="bank" name="payment" value="bank">Bank Transfer <img src="bank1.jpg" alt="Bank Transfer" height="30"></label>
       </div>
+      
+    
     <button id="qrbtn">Show QR</button>
     <button type="submit">Submit Form</button>
   
@@ -258,7 +260,7 @@ textarea {
       }
     });
   </script>
-  </form>
+   </form>
 </body>
 
 </html>
